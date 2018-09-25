@@ -208,6 +208,14 @@ csrs = [
   (0xF12, 'marchid'),
   (0xF13, 'mimpid'),
   (0xF14, 'mhartid'),
+
+  # Vector CSRs
+  (0x400, 'vregmax'),
+  (0x401, 'vemaxw'),
+  (0x402, 'vtypeen'),
+  (0x403, 'vl'),
+  (0x404, 'vxrm'),
+  (0x405, 'vxcm'),
 ]
 
 csrs32 = [

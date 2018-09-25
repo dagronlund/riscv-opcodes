@@ -1,21 +1,19 @@
 SHELL := /bin/sh
 
-ISASIM_H := ../riscv-isa-sim/riscv/encoding.h
-PK_H := ../riscv-pk/machine/encoding.h
-FESVR_H := ../riscv-fesvr/fesvr/encoding.h
-ENV_H := ../riscv-tests/env/encoding.h
-OPENOCD_H := ../riscv-openocd/src/target/riscv/encoding.h
+SPIKE_H := ../spike/riscv/riscv-opc.h
+BINUTILS_H := ../binutils/include/opcode/riscv-opc.h
+FESVR_H := ../fesvr/fesvr/encoding.h
 
-ALL_OPCODES := opcodes-pseudo opcodes opcodes-rvc opcodes-rvc-pseudo opcodes-custom
+ALL_OPCODES := opcodes-pseudo opcodes opcodes-rvc opcodes-rvc-pseudo opcodes-custom opcodes-vec
 
-install: $(ISASIM_H) $(PK_H) $(FESVR_H) $(ENV_H) $(OPENOCD_H) inst.chisel instr-table.tex priv-instr-table.tex
+install: $(SPIKE_H) $(BINUTILS_H) $(FESVR_H)
 
-$(ISASIM_H) $(PK_H) $(FESVR_H) $(ENV_H) $(OPENOCD_H): $(ALL_OPCODES) parse-opcodes encoding.h
+$(SPIKE_H) $(BINUTILS_H) $(FESVR_H): $(ALL_OPCODES) parse-opcodes encoding.h
 	cp encoding.h $@
-	cat opcodes opcodes-rvc-pseudo opcodes-rvc opcodes-custom | ./parse-opcodes -c >> $@
+	cat opcodes-pseudo opcodes opcodes-rvc opcodes-rvc-pseudo opcodes-custom opcodes-vec | ./parse-opcodes -c > $@
 
 inst.chisel: $(ALL_OPCODES) parse-opcodes
-	cat opcodes opcodes-rvc opcodes-rvc-pseudo opcodes-custom opcodes-pseudo | ./parse-opcodes -chisel > $@
+	cat opcodes opcodes-rvc opcodes-rvc-pseudo opcodes-custom opcodes-pseudo opcodes-vec | ./parse-opcodes -chisel > $@
 
 inst.go: opcodes opcodes-pseudo parse-opcodes
 	cat opcodes opcodes-pseudo | ./parse-opcodes -go > $@
