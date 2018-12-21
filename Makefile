@@ -1,6 +1,6 @@
 SHELL := /bin/sh
 
-SPIKE_H := ../spike/riscv/riscv-opc.h
+SPIKE_H := ../spike/common/riscv-opc.h
 BINUTILS_H := ../binutils/include/opcode/riscv-opc.h
 FESVR_H := ../fesvr/fesvr/encoding.h
 
