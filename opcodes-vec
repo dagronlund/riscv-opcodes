@@ -1,19 +1,22 @@
-vconfig		rd rs1 imm12 14..12=1 6..3=0xA 2..0=0x7
-vsetvl		rd rs1 imm12 14..12=2 6..3=0xA 2..0=0x7
-vadd		rd rs1 rs2 31..25=0 14..12=1 6..3=0xB 2..0=0x7
-vsub		rd rs1 rs2 31..25=0 14..12=2 6..3=0xB 2..0=0x7
-vand		rd rs1 rs2 31..25=0 14..12=3 6..3=0xB 2..0=0x7
-vmul		rd rs1 rs2 31..25=0 14..12=4 6..3=0xB 2..0=0x7
-vcliph		rd rs1 rs2 31..25=0 14..12=5 6..3=0xB 2..0=0x7
-vredsum		rd rs1 rs2 31..25=0 14..12=6 6..3=0xB 2..0=0x7
-vpermute	rd rs1 rs2 31..25=0 14..12=7 6..3=0xB 2..0=0x7
-vmove		rd rs1 rs2 31..25=1 14..12=1 6..3=0xB 2..0=0x7
-vslt		rd rs1 rs2 31..25=2 14..12=1 6..3=0xB 2..0=0x7
-vsle		rd rs1 rs2 31..25=3 14..12=1 6..3=0xB 2..0=0x7
-vsgt		rd rs1 rs2 31..25=4 14..12=1 6..3=0xB 2..0=0x7
-vsge		rd rs1 rs2 31..25=5 14..12=1 6..3=0xB 2..0=0x7
-vlh			rd rs1 rs2 31..25=0 14..12=1 6..3=0xC 2..0=0x7
-vlxh		rd rs1 rs2 31..25=0 14..12=2 6..3=0xC 2..0=0x7
-vlsh		rd rs1 rs2 31..25=0 14..12=3 6..3=0xC 2..0=0x7
-vsh			rd rs1 rs2 31..25=0 14..12=4 6..3=0xC 2..0=0x7
-vssh		rd rs1 rs2 31..25=0 14..12=5 6..3=0xC 2..0=0x7
+vconfig		rd rs1 imm12 14..12=0 6..3=0xA 2..0=0x7
+vsetvl		rd rs1 imm12 14..12=1 6..3=0xA 2..0=0x7
+vadd		rd rs1 rs2 rs3 aqrl m 14..13=0 6..3=0xB 2..0=0x7
+vsub		rd rs1 rs2 rs3 aqrl m 14..13=1 6..3=0xB 2..0=0x7
+vmul		rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0xB 2..0=0x7
+vcliph		rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0xB 2..0=0x7
+vand		rd rs1 rs2 rs3 aqrl m 14..13=1 6..3=0xC 2..0=0x7
+vor			rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0xC 2..0=0x7
+vnot		rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0xC 2..0=0x7
+vslt		rd rs1 rs2 rs3 aqrl m 14..13=1 6..3=0x8 2..0=0x7
+vsle		rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0x8 2..0=0x7
+vsgt		rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0x8 2..0=0x7
+vsge		rd rs1 rs2 rs3 aqrl m 14..13=1 6..3=0xE 2..0=0x7
+vmove		rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0xE 2..0=0x7
+vpermute	rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0xE 2..0=0x7
+vredsum		rd rs1 rs2 rs3 m 26..25=0 14..13=0 6..3=0xF 2..0=0x7
+vlh			rd rs1 rs2 rs3 aqrl m 14..13=1 6..3=0xF 2..0=0x7
+vlxh		rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0xF 2..0=0x7
+vlsh		rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0xF 2..0=0x7
+vsh			rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0xA 2..0=0x7
+vssh		rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0xA 2..0=0x7
+
