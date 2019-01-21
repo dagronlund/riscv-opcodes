@@ -11,12 +11,12 @@ vslt		rd rs1 rs2 rs3 aqrl m 14..13=1 6..3=0x8 2..0=0x7
 vsle		rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0x8 2..0=0x7
 vsgt		rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0x8 2..0=0x7
 vsge		rd rs1 rs2 rs3 aqrl m 14..13=1 6..3=0xE 2..0=0x7
-vmove		rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0xE 2..0=0x7
+vmove		rd rs1 rs2 aqrl 31..27=0 14..13=2 12=0 6..3=0xE 2..0=0x7
 vpermute	rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0xE 2..0=0x7
 vredsum		rd rs1 rs2 rs3 m 26..25=0 14..13=0 6..3=0xF 2..0=0x7
 vlh			rd rs1 rs2 rs3 aqrl m 14..13=1 6..3=0xF 2..0=0x7
 vlxh		rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0xF 2..0=0x7
 vlsh		rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0xF 2..0=0x7
-vsh			rd rs1 rs2 rs3 aqrl m 14..13=2 6..3=0xA 2..0=0x7
-vssh		rd rs1 rs2 rs3 aqrl m 14..13=3 6..3=0xA 2..0=0x7
+vsh			rd rs1 rs2 rs3 m 26..25=0 14..13=2 6..3=0xA 2..0=0x7
+vssh		rd rs1 rs2 rs3 m 26..25=0 14..13=3 6..3=0xA 2..0=0x7
 
