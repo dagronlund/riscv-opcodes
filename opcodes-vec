@@ -19,4 +19,5 @@ vlxh		rd rs1 rs2 rs3 aqrl 14..12=2 6..3=0xF 2..0=0x7
 vlsh		rd rs1 rs2 rs3 aqrl 14..12=3 6..3=0xF 2..0=0x7
 vsh			rd rs1 rs2 rs3 aqrl 14..12=5 6..3=0xF 2..0=0x7
 vssh		rd rs1 rs2 rs3 aqrl 14..12=6 6..3=0xF 2..0=0x7
+vsxh		rd rs1 rs2 rs3 aqrl 14..12=7 6..3=0xF 2..0=0x7
 
