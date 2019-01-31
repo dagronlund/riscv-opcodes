@@ -7,10 +7,12 @@ vcliph		rd rs1 rs2 rs3 aqrl 14..12=3 6..3=0xB 2..0=0x7
 vand		rd rs1 rs2 rs3 aqrl 14..12=4 6..3=0xB 2..0=0x7
 vor			rd rs1 rs2 rs3 aqrl 14..12=5 6..3=0xB 2..0=0x7
 vnot		rd rs1 rs2 rs3 aqrl 14..12=6 6..3=0xB 2..0=0x7
-vslt		rd rs1 rs2 rs3 aqrl 14..12=1 6..3=0xC 2..0=0x7
-vsle		rd rs1 rs2 rs3 aqrl 14..12=2 6..3=0xC 2..0=0x7
-vsgt		rd rs1 rs2 rs3 aqrl 14..12=3 6..3=0xC 2..0=0x7
-vsge		rd rs1 rs2 rs3 aqrl 14..12=4 6..3=0xC 2..0=0x7
+vseq 		rd rs1 rs2 rs3 aqrl 14..12=1 6..3=0xC 2..0=0x7
+vsneq 		rd rs1 rs2 rs3 aqrl 14..12=2 6..3=0xC 2..0=0x7
+vslt		rd rs1 rs2 rs3 aqrl 14..12=3 6..3=0xC 2..0=0x7
+vsle		rd rs1 rs2 rs3 aqrl 14..12=4 6..3=0xC 2..0=0x7
+vsgt		rd rs1 rs2 rs3 aqrl 14..12=5 6..3=0xC 2..0=0x7
+vsge		rd rs1 rs2 rs3 aqrl 14..12=6 6..3=0xC 2..0=0x7
 vmove		rd rs1 rs2 rs3 aqrl 14..12=1 6..3=0x8 2..0=0x7
 vpermute	rd rs1 rs2 rs3 aqrl 14..12=2 6..3=0x8 2..0=0x7
 vredsum		rd rs1 rs2 rs3 aqrl 14..12=3 6..3=0x8 2..0=0x7
