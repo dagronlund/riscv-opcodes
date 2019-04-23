@@ -140,3 +140,5 @@ vfncvt.f.x.v  rd rs2 m            31..26=0x22 19..15=0x13 14..12=0x2 6..0=0x57
 
 vfncvt.f.f.v  rd rs2 m            31..26=0x22 19..15=0x14 14..12=0x2 6..0=0x57
 
+vslideup.vi   rd rs2 m            31..26=0x0E 19..15=0x01 14..12=0x3 6..0=0x57
+vslidedown.vi rd rs2 m            31..26=0x0F 19..15=0x01 14..12=0x3 6..0=0x57
