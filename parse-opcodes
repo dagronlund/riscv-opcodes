@@ -32,7 +32,6 @@ arglut['zimm11'] = (30,20)
 arglut['shamt'] = (25,20)
 arglut['shamtw'] = (24,20)
 arglut['vseglen'] = (31,29)
-arglut['m'] = (25, 25)
 
 causes = [
     (0x00, 'misaligned fetch'),
